@@ -1,0 +1,177 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --softBlueLight: hsla(215, 52%, 70%, 0.7);
+    --veryDarkBlueMain: hsl(217, 54%, 11%); /*(main BG)*/
+    --veryDarkBlueCard: hsl(216, 50%, 16%); /*(card BG)*/
+    --veryDarkBlueLine: hsl(215, 32%, 27%);/*(line)*/
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.8rem;
+    background-color: var(--veryDarkBlueMain);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*CARD*/
+.card {
+    background-color: var(--veryDarkBlueCard);
+    margin: 4rem auto;
+    width: 80%;
+    max-width: 320px;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px var(--veryDarkBlueMain);
+    /* background-color: #fff; */
+    /* height: 100vh; */
+    padding: 2rem;
+}
+
+/*IMAGE EQUILIBRIUM*/
+.image-box {
+    margin-bottom: 2rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.image-cube {
+    border-radius: 1rem;
+}
+
+.overlay {
+    background-color: var(--cyan);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 1rem;
+    display: none;
+}
+
+.view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.image-box:hover .overlay {
+    display: block;
+}
+
+.image-box:hover .view {
+    display: block;
+}
+
+/*CONTENT*/
+
+.content {
+    margin-bottom: 2rem;
+    max-width: 262px;
+}
+
+.primary-main {
+    margin-bottom: 2rem;
+    color: var(--white);
+    font-size: 2.2rem;
+}
+
+.primary-main:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.primary-sub {
+    color: var(--softBlueLight);
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+
+/*FLEX-BOX*/
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.etherum-box {
+    color: var(--cyan);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.clock-box {
+    color: var(--softBlueLight);
+}
+
+.span + .span {
+    margin-left: .5rem;
+}
+
+
+/*AVATAR-BOX*/
+
+.avatar-box {
+    border-top: 2px solid var(--veryDarkBlueLine);
+    padding-top: 1rem;
+    
+}
+
+.image-avatar-box {
+    display: flex;
+    align-items: center;
+}
+
+.image-avatar {
+    width: 5vh;
+    border-radius: 100%;
+    margin-right: 1rem;
+    border: 1px solid var(--white);
+}
+
+.avatar-title {
+    font-size: 1.5rem;
+    display: flex;
+    font-weight: 200;
+}
+
+.avatar-title-first {
+    color: var(--softBlue);
+    margin-right: 0.5rem;
+    opacity: 0.8;
+}
+
+.avatar-title-second {
+    color: var(--white)
+}
+
+.avatar-title-second:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
